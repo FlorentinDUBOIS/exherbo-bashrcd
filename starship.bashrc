@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function set-window-title() {
-  echo -ne "\033]0; $USER@$HOSTNAME: $PWD $ \007"
+  echo -ne "\033]0; $USER in $PWD: \007"
 }
 
 function setup-starship() {
