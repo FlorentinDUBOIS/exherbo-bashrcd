@@ -1,7 +1,9 @@
 #!/bin/bash
 
 function main() {
-    local modules=("bash_completion.sh" "thefuck.bashrc" "direnv.bashrc" "autojump.bashrc" "env.bashrc" "rustup.bashrc" "nvm.bashrc" "jabba.bashrc" "aliases.bashrc" "starship.bashrc" "completion.bashrc")
+    export PATH="${PATH}:${HOME}/.local/bin"
+
+    local modules=("bash_completion.sh" "transfer.bashrc" "golang.bashrc" "direnv.bashrc" "autojump.bashrc" "env.bashrc" "rustup.bashrc" "nvm.bashrc" "jabba.bashrc" "aliases.bashrc" "starship.bashrc" "completion.bashrc" "krew.bashrc")
     for module in "${modules[@]}"; do
         source "/etc/bash/bashrc.d/${module}"
     done
@@ -14,6 +16,7 @@ function main() {
     setup-autojump
     setup-direnv
     setup-completion
-    setup-thefuck
     setup-starship
+    setup-golang
+    setup-krew
 }
