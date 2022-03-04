@@ -10,7 +10,7 @@ function main() {
 
     setup-env
     setup-rustup
-    setup-jabba
+    # setup-jabba
     setup-nvm
     setup-aliases
     setup-autojump
